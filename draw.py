@@ -28,12 +28,6 @@ def add_point( matrix, x, y, z=0 ):
             line=line + 1
     return matrix
 
-mat = new_matrix(4, 4)
-print(add_point(mat, 1, 2, 0))
-print(add_point(mat, 2, 1, 0))
-print(add_point(mat, 2, 3, 0))
-print(add_point(mat, 3, 2, 0))
-
 def draw_line( screen, x0, y0, x1, y1, color ):
     dx = x1 - x0
     dy = y1 - y0
