@@ -16,17 +16,10 @@ def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
     add_point(matrix, x1, y1, z1)
 
 def add_point( matrix, x, y, z=0 ):
-    line=0
-    pa=4
-    parts=[x, y, z, 0]
-    while (line < 4):
-        if((matrix[line][0]==0) and (matrix[line][1]==0) and (matrix[line][2]==0) and (matrix[line][3]==0)):
-            for p in range(pa):
-                matrix[line][p] = parts[p]
-            line=4
-        else:
-            line=line + 1
-    return matrix
+    matrix[0].append(x)
+    matrix[1].append(y)
+    matrix[2].append(z)
+    matrix[3].append(1)
 
 def draw_line( screen, x0, y0, x1, y1, color ):
     dx = x1 - x0

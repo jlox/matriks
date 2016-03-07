@@ -89,6 +89,6 @@ def matrix_mult( m1, m2 ):
         for co in range(c):
             res=0
             for i in range(l):
-                res+=m1[ro][i] + m2[i][co]
-            newie[ro][co] = red
+                res+=m1[ro][i] * m2[i][co]
+            newie[ro][co] = res
     return newie
